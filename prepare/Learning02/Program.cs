@@ -28,4 +28,26 @@ class Program
 
        
     }
+
+    private class Resume
+    {
+        internal readonly object _jobs;
+        internal string _name;
+
+        public Resume()
+        {
+        }
+    }
+}
+
+internal class Job
+{
+    internal string _jobTitle;
+    internal string _jobCompany;
+    internal int _endYear;
+    internal int _startYear;
+
+    public Job()
+    {
+    }
 }
