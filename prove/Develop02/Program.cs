@@ -12,7 +12,7 @@ class Program
     }
 }
 
-class Journal
+public class Journal
 {
     private string File;
     private object myJournal;
@@ -26,6 +26,7 @@ class Journal
         RunMenu();
     }
 
+
     private void GetChoice()
     {
         
@@ -33,7 +34,7 @@ class Journal
 
     private void DisplayJournalEntry()
     {
-        Console.WriteLine ="Journal Contents Display";
+        Console.ReadLine ="Journal Contents Display";
 
     }
 
@@ -45,7 +46,7 @@ class Journal
         File.CreateText("myJournal.txt");
     }
     }
-    private void ReadJournalContents()
+    public void ReadJournalContents()
     {
     string journal text = File.ReadAllText(myJournal.txt);
         Console.WriteLine("myJournal.txt");    
@@ -103,24 +104,4 @@ class Journal
     
     }
 
-    private void Quit()
-    {
-        
-    }
-
-    private void SaveJournalContents()
-    {
-        
-    }
-
-    private void WriteJournalContents()
-    {
-        
-    }
-
-    private void run()
-    {
-    
-    }
-}
-}
+   
