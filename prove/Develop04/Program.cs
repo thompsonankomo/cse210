@@ -64,7 +64,7 @@ class Program
         set{
             if(value == true;)
             {
-                NewText1==value , NewText2==value, New3== value
+                NewText1==value , NewText2==value, NewText3== value
             } 
         }
         else{
