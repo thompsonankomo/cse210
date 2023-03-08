@@ -1,9 +1,9 @@
 using System;
 
-class Program
+public class Person
 {
-    static void Main(string[] args)
+    public string GetName()
     {
-        Console.WriteLine("Hello Sandbox World!");
+      return Joseph;
     }
 }
