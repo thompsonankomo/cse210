@@ -8,6 +8,12 @@ public class Reference
         _verse = Verse;
 
     }
+
+    public Reference(string v)
+    {
+        this.v = v;
+    }
+
     private string book;
     private string GetBook()
     {
@@ -24,6 +30,8 @@ public class Reference
         return chapter;
     }
     private int verse;
+
+
     private string GetVerse()
     {
         return verse;

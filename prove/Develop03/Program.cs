@@ -12,7 +12,7 @@ class Program
 
        while (true)
        {
-        Console.WriteLine("Welcome to theScripture Memorizer App. We hope you will enjoy playing.  Press Play to start.");
+        Console.WriteLine("Welcome to theScripture Memorizer App. We hope you will enjoy playing.  Press Enter to start.Quit to end the game");
         Console.WriteLine(scripture.Display);
         Console.ReadLine();
        } 
