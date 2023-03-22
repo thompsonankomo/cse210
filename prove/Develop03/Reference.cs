@@ -4,20 +4,22 @@ public class Reference
     public Reference(string book, int Chapter, int Verse)
     {
         _book = book;
-        _chapter = Chapter;
-        _verse = Verse;
+        _chapter = chapter;
+        _verse = verse;
 
     }
-
-    public Reference(string v)
+    public Reference(string book, int chapter,int verse, int EndVerse)
     {
-        this.v = v;
-    }
+     _book =book;
+     _chapter = chapter;
+     _verse = verse;
+     
 
+    }
     private string book;
     private string GetBook()
     {
-        return book;
+        return _book;
     }
     private string SetBook(string book)
     {
@@ -27,23 +29,32 @@ public class Reference
     private int chapter;
     private string GetChapter()
     {
-        return chapter;
+        return _chapter;
     }
     private int verse;
 
 
     private string GetVerse()
     {
-        return verse;
+        return _verse;
     }
+    private int verse;
+    private int GetVerse()
+    {
+     return _verse;
+    }
+    private int EndVerse;
+    private int GetEndVerse()
+    {return _EndVerse;}
+
     public string Display()
     {
-        if (verse == 0)
+        if (_EndVerse< 0)
         {
-            return($"{_book}{_chapter}:{verse}");
+            return($"{_book}{_chapter} -{_EndVerse}");
         }
         else {
-            return($"{_book}{_chapter}{verse}");
+            return($"{_book}{_chapter}{_EndVerse}");
         }
     }
 }
