@@ -35,6 +35,17 @@ class program
          {
             this.menu = menu;
          }
+         static void  Main(string[]args)
+         {
+            store store = new store("Asakhe Hardware");
+            store.setName("Asakhe Hardware");
+            store.setCustomerDetails("");
+            store.setMenu("");
+            store.setDepartments("");
+            Console.WriteLine(store.returnDetails());
+            Console.ReadLine();
+
+         }
 
 
           
