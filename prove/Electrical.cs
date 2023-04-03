@@ -8,7 +8,7 @@ class Electricals
  }
  public void printMenu()
  {
-    Console.WriteLine("Welcome to Asakhe Plumbing");
+    Console.WriteLine("Welcome to Asakhe Electricals");
     Console.WriteLine("1.Print all Porducts");
     Console.WriteLine("2. Add a Product");
     Console.WriteLine("3. Search a product");

@@ -9,8 +9,8 @@ class Gardening
  }
  public void printMenu()
  {
-    Console.WriteLine("Welcome to Asakhe Plumbing");
-    Console.WriteLine("1.Print all Porducts");
+    Console.WriteLine("Welcome to Asakhe Gardening tools");
+    Console.WriteLine("1.Print all Products");
     Console.WriteLine("2. Add a Product");
     Console.WriteLine("3. Search a product");
     Console.WriteLine("4. Remove a product");
