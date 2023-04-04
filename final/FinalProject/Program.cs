@@ -9,6 +9,8 @@ class program
         public string customerDetails{get; protected set;}
         public string departments{get; set;}
         public string menu;
+        private string v;
+
         public int priceOfProducts{get; set;}
 
         public store(string name, string customerDetails,string departments, string menu, int priceOfProducts)
@@ -18,8 +20,15 @@ class program
             this.departments=departments;
             this.menu = menu;
             this.priceOfProducts= priceOfProducts;
+    
          }
-         private void setName(string name)
+
+        public store()
+        {
+        
+        }
+
+        private void setName(string name)
          {
             this.name = name;
          }
@@ -44,23 +53,14 @@ class program
             store.setDepartments("");
             Console.WriteLine(store.returnDetails());
             Console.ReadLine();
+            
 
          }
 
-
-          
-         
-
-    
-
-        
-
-
-        
-
-        
-
-
+        private bool returnDetails()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
