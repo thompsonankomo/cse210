@@ -15,17 +15,17 @@ class Tiling
     {
      Tiling= new List<Tiling>()
     {
-        new Tiling("Bush Coupling"),
-        new Tiling("Chamber Cistern"),
-        new Tiling("Water Pipes"),
+        new Tiling("Zim ex tiles"),
+        new Tiling("Claddinng 60"),
+        new Tiling("clsadding 40"),
         new Tiling("Water Poly Tank"),
         new Tiling("Sewage Pipe"),
-        new Tiling("Compresion Elbow"),
-        new Tiling("Water Faucet"),
-        new Tiling("Water Solar Geyser"),
-        new Tiling("Water Electric Geysers"),
-        new Tiling("Copper Pipes"),
-        new Tiling("Conduit Pipes")
+        new Tiling("Mkhonto tiles),
+        new Tiling("Umfula Tilest"),
+        new Tiling("Waterlogged tiles"),
+        new Tiling("Water solube Tiles"),
+        new Tiling("Copper Tiless"),
+        new Tiling("Cont tiles)
 
     }
 }

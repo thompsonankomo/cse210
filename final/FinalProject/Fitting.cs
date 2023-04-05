@@ -12,17 +12,13 @@ class fitting
 {
         fitting fitting = new List<fitting>()
     {
-        new fitting("Bush Coupling"),
-        new fitting("Chamber Cistern"),
-        new fitting("Water Pipes"),
-        new fitting("Water Poly Tank"),
-        new fitting("Sewage Pipe"),
-        new fitting("Compresion Elbow"),
-        new fitting("Water Faucet"),
-        new fitting("Water Solar Geyser"),
-        new fitting("Water Electric Geysers"),
-        new fitting("Copper Pipes"),
-        new fitting("Conduit Pipes");
+        new fitting("Gloss Boards Fitting"),
+        new fitting("Wardrobes Fitting"),
+        new fitting("Kitchen Fittings"),
+        new fitting("Built in Cabinets"),
+        new fitting("Office  desks"),
+        new fitting("Big Office desks");
+       
     
 
     

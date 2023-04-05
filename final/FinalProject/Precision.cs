@@ -12,17 +12,15 @@ class Precision
     {
         Precision = new List<Precision>()
     {
-        new Precision ("Bush oupling"),
-        new Precision("Chamber Cistern"),
-        new Precision("Water Pipes"),
-        new Precision("Water Poly Tank"),
-        new Precision("Sewage Pipe"),
-        new Precision("Compresion Elbow"),
-        new Precision("Water Faucet"),
-        new Precision("Water Solar Geyser"),
-        new Precision("Water Electric Geysers"),
-        new Precision("Copper Pipes"),
-        new Precision("Conduit Pipes")
+        new Precision ("Angle Grinder"),
+        new Precision("Steel Grinder"),
+        new Precision("Cutting Disk"),
+        new Precision("Metal Polishe"),
+        new Precision("Metal cutting Plate"),
+        new Precision("Cutting Disk"),
+        new Precision("Rotary Hammer"),
+        
+     
 
     }
 }

@@ -12,17 +12,14 @@ class Paint
     {
         products = new List<Products>()
     {
-        new products("Bush Coupling"),
-        new Products("Chamber Cistern"),
-        new Products("Water Pipes"),
-        new Products("Water Poly Tank"),
-        new Products("Sewage Pipe"),
-        new Products("Compresion Elbow"),
-        new Products("Water Faucet"),
-        new Products("Water Solar Geyser"),
-        new Products("Water Electric Geysers"),
-        new Products("Copper Pipes"),
-        new Products("Conduit Pipes")
+        new products("Soluble Paints"),
+        new Products("PVA Paints"),
+        new Products("Gloss Paints"),
+        new Products("Water PVA Paint"),
+        new Products("Gloss Paint 76"),
+        new Products("Cream Paints"),
+        new Products("Yellow Paints"),
+        new Products("Black Paints"),
 
     }
 }

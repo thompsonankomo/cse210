@@ -12,23 +12,21 @@ class Gardening
     {
         Gardening = new List<Gardening>()
     {
-        new Gardening("Bush Coupling"),
-        new Gardening("Chamber Cistern"),
-        new Gardening("Water Pipes"),
-        new Gardening("Water Poly Tank"),
-        new Gardenings("Sewage Pipe"),
-        new Gardening("Compresion Elbow"),
-        new Gardening("Water Faucet"),
-        new Gardening("Water Solar Geyser"),
-        new Gardening("Water Electric Geysers"),
-        new Gardening("Copper Pipes"),
-        new Gardening("Conduit Pipes")
+        new Gardening("Bush Hoes"),
+        new Gardening("Gardening fork"),
+        new Gardening("Gardenig Axe"),
+        new Gardening("Ingco Axe"),
+        new Gardenings("Mutton Axe"),
+        new Gardening("Picks"),
+        new Gardening("Natural Axe"),
+        new Gardening("Hoes"),
+        new Gardening("Ingco Hoes 30"),
 
     }
 }
     public void printMenu()
     {
-        Console.WriteLine("Welcome to Asakhe Plumbing");
+        Console.WriteLine("Welcome to Asakhe Gardening");
         Console.WriteLine("1.Print all Products");
         Console.WriteLine("2. Add a Product");
         Console.WriteLine("3. Search a product");

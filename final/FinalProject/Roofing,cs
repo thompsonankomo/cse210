@@ -16,14 +16,14 @@ class Roofing
         new Roofing("Roof Trusses"),
         new Roofing("Roofing Nails"),
         new Roofing("WRoofing Memberane"),
-        new Roofing("Water Poly Tank"),
-        new Roofing("Sewage Pipe"),
-        new Roofing("Compresion Elbow"),
-        new Roofing("Water Faucet"),
-        new Roofing("Water Solar Geyser"),
-        new Roofing("Water Electric Geysers"),
-        new Roofing("Copper Pipes"),
-        new Roofing("Conduit Pipes")
+        new Roofing("Water Roofing Poles"),
+        new Roofing("Roofing Poles 40"),
+        new Roofing("Roofing Trusses 70"),
+        new Roofing("Roofing Sockets"),
+        new Roofing("Roofing Clout Nails"),
+        new Roofing("Roofing Nails 65"),
+        new Roofing("Roofing Nails 80"),
+        new Roofing("Roofing Nails 125")
 
     }
 }
