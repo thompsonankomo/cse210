@@ -1,60 +1,69 @@
-public class Reference
-
-{
-    public Reference(string book, int Chapter, int Verse)
-    {
+public class Reference{
+    public Reference(string book, int chapter, int verse){
         _book = book;
         _chapter = chapter;
         _verse = verse;
-
     }
-    public Reference(string book, int chapter,int verse, int EndVerse)
-    {
-     _book =book;
-     _chapter = chapter;
-     _verse = verse;
-     
 
+    public Reference(string book, int chapter, int verse, int endVerse){
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
+        _endVerse = endVerse;
     }
-    private string book;
-    private string GetBook()
+
+    public Reference(string reference)
     {
+        this._reference = reference;
+    }
+
+    private string _book;
+
+    private string GetBook(){
         return _book;
     }
-    private string SetBook(string book)
-    {
+    public void SetBook(string book){
         _book = book;
-    
     }
-    private int chapter;
-    private string GetChapter()
-    {
+    private int _chapter;
+
+    private int GetChapter(){
         return _chapter;
     }
-    private int verse;
 
+    public void SetChapter(int chapter){
+        _chapter = chapter;
+    }
+    private int _verse;
 
-    private string GetVerse()
-    {
+    private int GetVerse(){
         return _verse;
     }
-    private int verse;
-    private int GetVerse()
-    {
-     return _verse;
-    }
-    private int EndVerse;
-    private int GetEndVerse()
-    {return _EndVerse;}
+     public void SetVerse(int verse){
+        _verse = verse;
+     }
 
-    public string Display()
-    {
-        if (_EndVerse< 0)
-        {
-            return($"{_book}{_chapter} -{_EndVerse}");
-        }
-        else {
-            return($"{_book}{_chapter}{_EndVerse}");
-        }
+    private int _endVerse;
+    private string _reference;
+
+    private int GetEndVerse(){
+        return _endVerse;
     }
+
+    public void SetEndVerse(int endVerse){
+        _endVerse = endVerse;
+    }
+
+    public string Display(){
+        if(_endVerse < 0){
+            return ($"{_book} {_chapter}: {_verse} - {_endVerse}");
+        }
+        else{
+            return($"{_book} {_chapter}: {_verse}");
+
+        }
+
+    }
+
+
 }

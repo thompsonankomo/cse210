@@ -1,32 +1,29 @@
 using System;
-class system.string
 
 class Program
 {
     static void Main(string[] args)
     {
-       Reference reference = new Reference("Galatians 5, 22");
-       string verse ="But the fruit of the Spirit is love,joy, peace, longsuffering,gentleness,goodness, faith.";
-       Scripture scripture = new Scripture(Reference, verse);
-       var UserInput ="";
+        Reference reference = new Reference("1 Nephi 3:7");
+        string verse = "And it came to pass that I, Nephi, said unto my father: I will go and do the things which the Lord hath commanded, for I know that the Lord giveth no bcommandments unto the children of men, save he shall cprepare a way for them that they may accomplish the thing which he commandeth them.";
+        Scripture scripture = new Scripture(reference, verse);
+        var input = "";
+       while (true){
+            Console.WriteLine("Welcome to the Scripture Memorizer app! Press <Enter> Type <Quit> to exit the game");
+            Console.WriteLine(scripture.Display());
+            input = Console.ReadLine();
+            
+            if (input == "Quit"|| input == "quit"){
+                break;
+            }
+            if (scripture.IsCompletelyHidden()){
+                break;
+            }
+            scripture.HideWords();
 
-       while (true)
-       {
-        Console.WriteLine("Welcome to theScripture Memorizer App. We hope you will enjoy playing.  Press Play to start.");
-        Console.WriteLine(scripture.Display);
-        Console.ReadLine();
-       } 
-       
-       if (UserInput == "Play"|| "play")
-       {
-        play;
-       }
-       else
-       {
-        break;
-       }
-       scripture.HideWords();
+            
 
+       }
 
     }
 }

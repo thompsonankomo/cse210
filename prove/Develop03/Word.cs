@@ -1,41 +1,47 @@
-public class Words
-{
-    public Words(string word)
+public class Word {
+    public  Word(string word)
     {
         _word = word;
-        _IsHidden = true;
+        _isHidden = false;
     }
-    private string word;
+
+    private string _word;
     private string GetWord()
     {
-        return word;
+        return _word;
     }
-    public void SetWord( string word)
+
+    public void SetWord(string word)
     {
         _word = word;
     }
-    private bool _IsHidden(){
-       return _IsHidden;
+
+
+    private bool _isHidden {get;set;}
+    
+
+    public bool IsHidden()
+    {
+        return _isHidden;
     }
+
     public void HideWord()
     {
-        _IsHidden = false;
+        _isHidden = true;
     }
-    public string Display()
-   {
-    if (_IsHidden())
-    {
-        var word = "";
-        while (var letter in _word)
-        {
-            word += "_";
-        }
-        return word;
-    }
-   }
 
-    internal bool IsHidden()
+    public string Display()
     {
-        throw new NotImplementedException();
+        if(IsHidden()){
+            var word = "";
+            foreach(var letter in _word){
+                word += "_";
+
+            }
+            return word;
+        }
+
+        return _word;
     }
+
 }
