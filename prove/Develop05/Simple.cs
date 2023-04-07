@@ -1,38 +1,35 @@
-using System;
-
-
-
-public class SimpleGoals :Goal
+public class Simple : Goal
 {
-public SimpleGoals(): base()
-{
-    _complete = false;
-}
+    public Simple(): base()
+    {
+        _isComplete = false;
+    }
 
-public SimpleGoals(string name, string description, int points, bool complete)
-{
-    _name = name;
-    _description = description;
-    _points = points;
-    _complete = complete;
-}
-public overrride void SaveGoal()
-{
-    _complete = true;
-}
+    public Simple(string name, string description, int points, bool isComplete)
+    {
+        _name = name;
+        _desc = description;
+        _points = points;
+        _isComplete = isComplete;
+    }
+
+    public override void RecordEvent()
+    {
+        _isComplete = true;
+    }
+
     public override void DisplayGoal(int goalNumber)
     {
-        base.DisplayGoal(goalNumber);
-        string checkBox ="[]";
-        if(_complete)
+        string checkBox = "[]";
+        if (_isComplete)
         checkBox = "[x]";
-        Console.WriteLine($"{goalNumber},{checkBox}{_name},{_description}");
-
+        Console.WriteLine($"{goalNumber}. {checkBox} {_name} ({_desc})");
     }
+
     public override string DisplayGoalString()
     {
-        return base.DisplayGoalString();
-        string goal = $"SimpleGoal|{_name}|{_description}|{_points}|{_complete}";
+        string goal = $"SimpleGoal|{_name}|{_desc}|{_points}|{_isComplete}";
         return goal;
     }
+
 }

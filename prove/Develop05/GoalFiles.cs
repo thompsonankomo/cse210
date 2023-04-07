@@ -30,7 +30,7 @@ public class GoalFiles
 
     public void Load()
     {
-        Console.WriteLine("What is the file name!:");
+        Console.WriteLine("Enter the name of the file:");
         string fileName = Console.ReadLine();
         String line;
         try
@@ -87,13 +87,18 @@ public class GoalFiles
                     x++;
                     goal.DisplayGoal(x);
                 }
-                Console.Write("Which goal would you like to record? ");
+                Console.Write("Enter your saved goal.");
                 int input = int.Parse(Console.ReadLine());
                 Goal selectedGoal = goals[input-1];
-                selectedGoal.SavedGoal();
+                selectedGoal.RecordEvent();
                 _points = GetPoints() + selectedGoal.GetPoints();
-                Console.WriteLine($"You have earned the following {selectedGoal.GetPoints()}");
-                Console.WriteLine($"You now have {_points}");
+                Console.WriteLine($" You have been awarded the folowing {selectedGoal.GetPoints()}");
+                Console.WriteLine($"Current score is{_points}");
                 Console.WriteLine("");
+    }
+
+    internal object RecordEvent(List<Goal> goals)
+    {
+        throw new NotImplementedException();
     }
 }

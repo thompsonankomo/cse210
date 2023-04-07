@@ -2,52 +2,58 @@ public class Checklist : Goal
 {
     private int _targetCount;
     private int _currentCount;
+    private static int  _awardedPoints;
     private int _bonusPoints;
     private static object description;
     private static string name;
-    private static readonly object points;
+    private int awardedPoints;
+    
 
-    public Checklist(string name, string description, int points, bool isComplete, int currentCount, int targetCount, int bonusPoints) : base()
+    public Checklist(string name, string description, int points, bool isComplete, int currentCount, int targetCount, int bonusPoints, object awardedPoints) : base()
     {
-        _complete = false;
+        _isComplete = false;
         _targetCount = 0;
         _currentCount = 0;
         _bonusPoints = 0;
         _name = name;
-        _description = description;
+        _desc = description;
         _points = points;
         _targetCount = targetCount;
         _currentCount = currentCount;
-        _bonusPoints = bonusPoints;
+        _awardedPoints = awardedPoints;
+    }
+
+    public Checklist(string name, string description, int points, bool isComplete, int currentCount,int targetCount )
+    {
     }
 
     public void GoalBonus()
     {
-        Console.WriteLine("How many trials do you need for this Goal");
+        Console.WriteLine("You only have a few trials for this.");
         _targetCount  = int.Parse(Console.ReadLine());
-        Console.Write("How may bonus points should be awarded");
+        Console.Write("Enter the  number of points you wish to earn");
         _bonusPoints = int.Parse(Console.ReadLine());
     }
 
     public override void DisplayGoal(int goalNumber)
     {
         string checkBox = "[]";
-        if (_complete)
+        if (_isComplete)
         checkBox = "[x]";
-        Console.WriteLine($"{goalNumber}. {checkBox} {_name} ({_description}) >>> Progress {_currentCount}/{_targetCount}");
+        Console.WriteLine($"{goalNumber}. {checkBox} {_name} ({_desc})  {_currentCount}/{_targetCount}");
     }
 
-     public override void SavedGoal()
+     public override void RecordEvent()
        {
         _currentCount ++;
        if (_currentCount == _targetCount){
-           _complete = true;
+           _isComplete = true;
         }
 }
 
         public override string DisplayGoalString()
     {
-        string goal = $"ChecklistGoal|{_name}|{_description}|{_points}|{_complete}|{_currentCount}/{_targetCount}|{_bonusPoints}";
+        string goal = $"ChecklistGoal|{_name}|{_desc}|{_points}|{_isComplete}|{_currentCount}/{_targetCount}|{_bonusPoints}";
         return goal;
     }
 

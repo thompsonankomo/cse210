@@ -1,72 +1,72 @@
-using System;
-
-
 public abstract class Goal
 {
     protected string _name;
-    protected string _description;
-    protected int  _points;
-    protected bool _complete;
-    
+    protected string _desc;
+    protected int _points;
+    protected bool _isComplete;
 
-    public Goal( string name, string description, int points)
+    public Goal(string name, string description, int points)
     {
-     name =_name;
-     description = _description;
-     points = _points;
-     _complete = false;
-
-     _name = "";
-     _description = "";
-     _points = 0;
-     _complete = false;
-
-     
+        _name = name;
+        _desc = description;
+        _points = points;
+        _isComplete = false;
     }
+
+    public Goal()
+    {
+        _name = "";
+        _desc = "";
+        _points = 0;
+        _isComplete = false;
+    }
+
     public void GoalName()
     {
-        Console.WriteLine("What is the name of the Goal");
-        _name =Console.ReadLine();
+        Console.WriteLine("Please enter a title for your goal:");
+        _name = Console.ReadLine();
     }
-    public void GoalDescription()
+
+    public void GoalDesc()
     {
-        Console.WriteLine("Please describe your Goal");
-        _description = Console.ReadLine();
+        Console.WriteLine("Describe what you want to accomplish:");
+        _desc = Console.ReadLine();
     }
+
     public void GoalPoints()
     {
-        Console.WriteLine("How many points is this goal worth scoring");
-        _points = int.Parse (Console.ReadLine());
+        Console.WriteLine("How many points is this goal worth?:");
+        _points = int.Parse(Console.ReadLine());
     }
 
     public int GetPoints()
     {
         return _points;
     }
-    public  virtual void SaveGoal()
+
+    public virtual void RecordEvent()
     {
-        _complete = true;
+        _isComplete = true;
     }
-    public virtual void DisplayGoal(int goalNumber)
+
+    public virtual bool Iscomplete()
     {
-         Console.WriteLine($"{goalNumber}. {_name} ({_description})");
+        return _isComplete;
     }
-    public virtual void DisplaySimpleGoal(int goalNumber)
+
+    public virtual void DisplayGoal (int goalNumber)
     {
-        Console.WriteLine($"{goalNumber} , {_name} , {_description}");
+        Console.WriteLine($"{goalNumber}. {_name} ({_desc})");
     }
+
+    public virtual void DisplayGoalSimple(int goalNumber)
+    {
+        Console.WriteLine($"{goalNumber}. {_name}");
+    }
+
     public virtual string DisplayGoalString()
     {
-        string goal = $"{_name}|{_description}| {_points}|{ _complete}";
-        
+        string goal = $"{_name}|{_desc}| {_points}|{ _isComplete}";
         return goal;
     }
-    
-    
-
-
-
-
-
-
 }

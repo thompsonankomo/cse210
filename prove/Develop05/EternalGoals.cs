@@ -1,28 +1,24 @@
-using System;
-
-public class EternalGoals : Goal
+public class Eternal : Goal
 {
-    public EternalGoals(): base()
+    public Eternal(): base()
     {
-        _complete = false;
+        _isComplete = false;
     }
 
-    public EternalGoals(string name, string description, int points, bool complete)
+    public Eternal(string name, string description, int points, bool isComplete)
     {
         _name = name;
-        _description = description;
+        _desc = description;
         _points = points;
-        _complete = complete;
+        _isComplete = isComplete;
     }
 
-    public virtual override SaveGoal()
-    {
-        return SaveGoal;
-    }
+    public override void RecordEvent()
+    {}
+
     public override string DisplayGoalString()
     {
-      string goal =$"EternalGoal|{_name}|{_description}|{_points}|{_complete}";
-      return goal;
+        string goal = $"EternalGoal|{_name}|{_desc}|{_points}|{_isComplete}";
+        return goal;
     }
 }
-
