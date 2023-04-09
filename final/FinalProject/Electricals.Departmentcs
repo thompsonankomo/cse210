@@ -1,0 +1,62 @@
+using System;
+
+class ElectricalDepartment : Store
+{
+    internal string customerDetails;
+private string customerDetails =(Siyabonga Mkhize);
+  private  int setPriceRate = 0;
+  public int warranty = 4;
+  
+
+  List<products> eproducts = new List<products>();
+  cable c1 = new cable( red , 13)
+  products.add(c1);
+  electrical plug ep1 = new electrical plug(black, 5)
+  products.add(ep1);
+  iron i3  =  new iron(purple ,6);
+  products.add(i3);
+  security lamp sl3 = new security lamp(Blue, 4)
+  products.add(sl3);
+
+  foreach (products in electrical products)
+  {string.color c1.GetColor();
+
+  Console.WriteLine($"The {color} has an warranty for {})years
+  }
+private string GetCustomerDetails()
+{
+   return customerDetails;
+
+}
+private void setCustomerDetails(string customerDetails)
+{
+   _customerDetails =customerDetails
+}
+
+private int GetPriceRate()
+{
+   return priceRate;
+}
+public void Set setPriceRate(string priceRate)
+{
+   _priceRate = priceRate;
+}
+
+public string GetWarranty()
+{
+   return warranty;
+}
+public void setWarranty(string warranty)
+{
+   _warranty =warranty;
+}
+
+
+    
+   
+
+   
+}
+
+    
+

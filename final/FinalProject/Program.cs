@@ -1,66 +1,45 @@
-using System;
-using System.Collections.Generic;
-
-class program
+class Program
 {
-    class store
+
+
+    static void Main(string[] args)
     {
-        public string name;
-        public string customerDetails{get; protected set;}
-        public string departments{get; set;}
-        public string menu;
-        private string v;
+        ElectricalDepartment eDepartment = new ElectricalDepartment();
+        eDepartment.setName = ("Asakhe Electrical Department");
+        eDepartment.customerDetails = ("Mandla Moyor");
+        eDepartment.addProduct();
 
-        public int priceOfProducts{get; set;}
+        TilesDepartment tDepartment = new TilesDepartment();
+        tDepartment.setName = ("Asakhe Tiling Department");
+        tDepartment.setPriceRate = (13);
 
-        public store(string name, string customerDetails,string departments, string menu, int priceOfProducts)
-         {
-            this.name = name;
-            this.customerDetails= customerDetails;
-            this.departments=departments;
-            this.menu = menu;
-            this.priceOfProducts= priceOfProducts;
-    
-         }
+        GardeningDepartment gDepartment = new GardeningDepartment();
+        gDepartment.setPriceRate = ("12");
+        gDepartment.addProduct();
 
-        public store()
-        {
-        
-        }
 
-        private void setName(string name)
-         {
-            this.name = name;
-         }
-         private void setCustomerDetails(string customerDetails)
-         {
-            this.customerDetails = customerDetails;
-         }
-         public void setDepartments(string departments)
-         {
-            this.departments = departments;
-         }
-         public void setMenu(string menu)
-         {
-            this.menu = menu;
-         }
-         static void  Main(string[]args)
-         {
-            store store = new store("Asakhe Hardware");
-            store.setName("Asakhe Hardware");
-            store.setCustomerDetails("");
-            store.setMenu("");
-            store.setDepartments("");
-            Console.WriteLine(store.returnDetails());
-            Console.ReadLine();
-            
+        PrecisionDepartment pDepartment = new PrecisionDepartment();
+        pDepartment.setPriceRate = (14);
+        pDepartment.setCustomerDetails = ("Mnadla Sibanda");
 
-         }
+        RoofingDepartment rDepartment = new RoofingDepartment();
+        rDepartment.setPriceRate = (12);
+        rDepartment.setCustomerPhone = (0771734760);
 
-        private bool returnDetails()
-        {
-            throw new NotImplementedException();
-        }
-    }
+        PaintDepartment NewPaintDepartment = new PaintDepartment();
+        NewPaintDepartment.setId = ("123455");
+        NewPaintDepartment.setName = ("Asakhe Paints");
+
+        FittingDepartment fDepartment = new FittingDepartment();
+        fDepartment.SetName =("Asakhe Fitting Department");
+        fDepartment.setPriceRate = (12);
+
+        BoardsDepartment bDepartment = new BoardsDepartment();
+        bDepartment.setName = ("Asakhe Boards Department");
+        bDepartment.setPriceRate = (14);
 
 }
+
+    
+}
+
